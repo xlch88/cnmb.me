@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"/>
+		<title>😎高雅小视频😎雅雅雅雅雅雅雅🎵傻逼傻逼操你妈，你妈大逼人人插，左插插他妈右插插，插的你妈逼开花 ~</title>
+		<meta name=description content="高雅小视频,雅雅雅雅雅雅雅,傻逼傻逼操你妈，你妈大逼人人插，左插插他妈右插插，插的你妈逼开花">
+		<meta name=keywords content="高雅小视频,雅雅雅雅雅雅雅,傻逼傻逼操你妈,你妈大逼人人插,左插插他妈右插插,插的你妈逼开花">
+		<style>
+			body {
+				background: black;
+			}
+
+			video {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+				max-height: 100%;
+				max-width: 100%;
+				margin: auto;
+				object-fit: contain;
+				height: 100%;
+				width: 100%;
+			}
+			
+			a{
+                position: absolute;
+                right: 0;
+                bottom: 60px;
+                margin: 10px;
+                padding: 5px 10px;
+                background: rgb(0 0 0 / 50%);
+                color: #b0ff00;
+                text-decoration: none;
+                border-radius: 3px;
+                font-size: 12px;
+                width: 30px;
+                text-align: center;
+                left: 50%;
+                transform: translate(-35px, 0);
+			}
+		</style>
+	</head>
+	<body>
+		<video playsinline autoplay controls preload name="media" style="pointer-events: none;"></video>
+		<a href="/list">列表</a>
+		<script>
+			let videos = ['sbsbcnm.mp4', 'sbsbcnm2.mp4', 'sbsbcnm3.mp4', 'stznsln.mp4', 'cnmd2.mp4', 'hn1.mp4', 'hn2.mp4', 'fs.mp4', 'hj1.mp4', 'hnrdss.mp4', 'sbsbcnm-full.mp4'];
+			let i;
+
+			let isClickPlay = false;
+			document.addEventListener('click', clickToPlay);
+			document.getElementsByTagName('video')[0].addEventListener('click', clickToPlay);
+			document.getElementsByTagName('video')[0].addEventListener('ended', nextVideo);
+
+			nextVideo();
+
+			function nextVideo() {
+				if (location.pathname.substring(1) && location.pathname.substring(1) < videos.length) {
+					i = location.pathname.substring(1)
+				}else{
+					let ii;
+					do{ ii = random(0, videos.length - 1); }while(ii === i)
+					i = ii;
+				}
+				document.getElementsByTagName('video')[0].src = '/videos/' + videos[i];
+				console.log(i);
+				document.getElementsByTagName('video')[0].play();
+			}
+
+			function clickToPlay() {
+				document.getElementsByTagName('video')[0].play();
+				document.getElementsByTagName('video')[0].style.pointerEvents = '';
+				isClickPlay = true;
+			}
+
+			function random(min, max) {
+				return Math.round(Math.random() * (max - min)) + min;
+			}
+		</script>
+	</body>
+</html>
+<!-- https://github/xlch88 -->
