@@ -61,6 +61,17 @@ section {
 .logo {
   text-align: center;
   font-size: 5vw;
+  position: relative;
+}
+.logo:before {
+  content: "cnmb.me";
+  position: absolute;
+  top: -0.5vw;
+  left: -4vw;
+  font-size: 3vw;
+  background-image: linear-gradient(117deg, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .logo span:nth-child(1) {
   color: red;
