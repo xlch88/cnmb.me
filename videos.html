@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cn">
+	<head>
+		<meta charset="UTF-8" />
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+		<title>😎高雅小视频😎雅雅雅雅雅雅雅🎵傻逼傻逼操你妈，你妈大逼人人插，左插插他妈右插插，插的你妈逼开花 ~</title>
+		<meta name="description" content="高雅小视频,傻逼傻逼操你妈,三天之内杀了你,靠你娘" />
+		<meta name="keywords" content="高雅小视频,雅雅雅雅雅雅雅,傻逼傻逼操你妈,你妈大逼人人插,左插插他妈右插插,插的你妈逼开花" />
+
+		<link href="/assets/vendor/iconfont/iconfont.css" rel="stylesheet" />
+		<link href="/assets/style/common.css" rel="stylesheet" />
+		<link href="/assets/style/videos.css" rel="stylesheet" />
+	</head>
+	<body @vue:mounted="mounted">
+		<div class="player" ref="player">
+			<video
+				ref="video"
+				id="video"
+				playsinline
+				autoplay
+				controls
+				preload
+				:style="!isPlay ? `pointer-events: none` : ''"
+				:src="`/assets/video/gaoya/${videos[active].file}`"
+			></video>
+		</div>
+
+		<i id="list-button" class="cnmlgb cnm-list" @click="listIsShow = !listIsShow"></i>
+		<div id="list" :class="`${listIsShow ? 'active' : ''}`">
+			<div
+				:class="{item:true, active:active === i}"
+				v-for="(info,i) in videos"
+				@click="active = i; play(); listIsShow = false"
+			>
+				{{info.title}}
+			</div>
+		</div>
+
+		<script src="/assets/vendor/petite-vue/petite-vue.iife.js"></script>
+		<script src="/assets/js/videos.js"></script>
+	</body>
+</html>
+<!-- https://github.com/xlch88/cnmb.me -->

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "cnmlgb"; /* Project id 4146599 */
+  src: url('iconfont.woff2?t=1688179891532') format('woff2'),
+       url('iconfont.woff?t=1688179891532') format('woff'),
+       url('iconfont.ttf?t=1688179891532') format('truetype');
+}
+
+.cnmlgb {
+  font-family: "cnmlgb" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cnm-list:before {
+  content: "\e6c5";
+}
+

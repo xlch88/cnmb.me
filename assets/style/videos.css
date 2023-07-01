@@ -1,0 +1,70 @@
+@charset "UTF-8";
+body {
+  background: black;
+  overflow: hidden;
+}
+
+.player {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.player video {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+#list-button {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  font-size: 25px;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+  padding: 5px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#list {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  right: -250px;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  backdrop-filter: blur(10px);
+  transition: right 0.3s;
+}
+#list.active {
+  right: 0;
+}
+#list .item {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  color: #ff5d94;
+  text-decoration: none;
+  cursor: pointer;
+}
+#list .item:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+#list .item.active {
+  background: rgba(255, 255, 255, 0.5);
+}
+#list .item::before {
+  content: "🌸 ";
+}
+
+/*# sourceMappingURL=videos.css.map */

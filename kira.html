@@ -1,0 +1,29 @@
+<html lang="cn">
+	<head>
+		<meta charset="UTF-8" />
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+		<title>Kira~ kira~</title>
+
+		<link href="/assets/style/kira.css" rel="stylesheet" />
+	</head>
+	<body class="tips">
+		<div id="warning">
+			<h1>⚠️光敏性癫痫发生器⚠️</h1>
+			<p>该页面有高频闪烁画面，可能会造成精神污染或诱发光敏性癫痫，请谨慎观赏，如有不适请立即去世。</p>
+			<p>切换时间 (ms):</p>
+			<input type="number" value="30" id="ms" />
+
+			<p>请选择颜色:</p>
+			<button onclick="start(['white', 'black'])">White / Black</button>
+			<button onclick="start(['rgb(255,0,0)', 'rgb(0,0,255)'])">Red / Blue</button>
+			<button onclick="start(['rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(0,0,255)'])">RGB</button>
+			<button onclick="start(['#55cdfc', '#ff728f'])">Red / Blue (Light)</button>
+			<button onclick="start(['rgb(255,0,0)', 'rgb(0,0,0)'])">Red / Black</button>
+			<button onclick="start(['rgb(255,0,0)', 'rgb(255,255,255)'])">Red / White</button>
+
+			<p>(开始后，再次点击屏幕退出)</p>
+		</div>
+		<canvas id="kira"></canvas>
+		<script src="/assets/js/kira.js"></script>
+	</body>
+</html>

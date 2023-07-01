@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  height: calc(100vh - env(safe-area-inset-top));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  min-height: 650px;
+}
+
+section {
+  max-width: 700px;
+  padding: 15px;
+}
+
+#urls {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+#urls .url-group {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+#urls p {
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  margin: 0;
+}
+#urls p .b {
+  margin-bottom: 30px;
+}
+#urls p a {
+  color: #ff899e;
+  text-decoration: none;
+  border: 2px dashed;
+  padding: 0 10px;
+  text-align: left;
+  line-height: 60px;
+  display: flex;
+  border-radius: 15px;
+  transition: border-radius 0.3s;
+}
+#urls p a:hover {
+  border-radius: 0;
+}
+#urls p span {
+  font-size: 35px;
+  margin-right: 5px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 5vw;
+}
+.logo span:nth-child(1) {
+  color: red;
+}
+.logo span:nth-child(2) {
+  color: #0048ff;
+}
+.logo span:nth-child(3) {
+  color: red;
+  font-size: 1.5em;
+}
+.logo span:nth-child(4) {
+  color: #307fff;
+}
+.logo span:nth-child(5) {
+  color: red;
+}
+.logo span:nth-child(6) {
+  color: #ff26c7;
+  font-size: 2em;
+}
+
+.github {
+  text-align: center;
+}
+
+@media (max-width: 570px) {
+  #urls p {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

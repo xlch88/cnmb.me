@@ -1,0 +1,16 @@
+{
+  "id": "4146599",
+  "name": "cnmb",
+  "font_family": "cnmlgb",
+  "css_prefix_text": "cnm-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "12578874",
+      "name": "list",
+      "font_class": "list",
+      "unicode": "e6c5",
+      "unicode_decimal": 59077
+    }
+  ]
+}
