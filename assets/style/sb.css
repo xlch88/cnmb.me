@@ -28,6 +28,12 @@ p {
   text-align: center;
   font-family: "Inter", sans-serif;
 }
+.overlay .overlay-body .cnm-cookie {
+  font-size: 80px;
+  margin: 20px 0;
+  display: block;
+  color: rgba(132, 94, 194, 0.4588235294);
+}
 .overlay .overlay-body .overlay-title {
   font-size: 24px;
   font-weight: 900;

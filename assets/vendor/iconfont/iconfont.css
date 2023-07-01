@@ -1,8 +1,8 @@
 @font-face {
   font-family: "cnmlgb"; /* Project id 4146599 */
-  src: url('iconfont.woff2?t=1688179891532') format('woff2'),
-       url('iconfont.woff?t=1688179891532') format('woff'),
-       url('iconfont.ttf?t=1688179891532') format('truetype');
+  src: url('iconfont.woff2?t=1688188946260') format('woff2'),
+       url('iconfont.woff?t=1688188946260') format('woff'),
+       url('iconfont.ttf?t=1688188946260') format('truetype');
 }
 
 .cnmlgb {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.cnm-cookie:before {
+  content: "\e654";
 }
 
 .cnm-list:before {
