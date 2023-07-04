@@ -1,0 +1,310 @@
+@charset "UTF-8";
+html {
+  background: #f00;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: overlay;
+  overflow-y: overlay;
+  margin: 0;
+}
+body::before {
+  content: "点击任意位置开始";
+  position: fixed;
+  font-size: 50px;
+  width: 500px;
+  left: 50%;
+  margin-left: -250px;
+  top: 700px;
+  z-index: 100000000;
+  background: #000;
+  color: red;
+  text-align: center;
+  line-height: 100px;
+}
+
+audio {
+  position: absolute;
+  left: 50%;
+  width: 400px;
+  margin-left: -200px;
+  top: 836px;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+}
+.background img {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+}
+
+#main {
+  position: relative;
+  width: 1600px;
+  height: 900px;
+  overflow: hidden;
+  margin: auto;
+}
+#main .lingtang {
+  position: relative;
+}
+#main .lingtang .zhaopian {
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  margin: 0 0 0 -150px;
+  overflow: hidden;
+  height: 375px;
+  top: 180px;
+}
+#main .lingtang .zhaopian img:nth-child(1) {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  margin: 0 0 0 -150px;
+  /* background: #fff; */
+  z-index: 2;
+}
+#main .lingtang .zhaopian img:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin: 0 0 0 -150px;
+  /* background: #fff; */
+  box-sizing: border-box;
+  padding: 38px;
+  background: #fff;
+  z-index: 1;
+  filter: grayscale(100%) !important;
+}
+#main .lingtang .wanlian {
+  position: relative;
+  z-index: 2;
+}
+#main .lingtang .wanlian > div {
+  position: absolute;
+}
+#main .lingtang .wanlian > .left,
+#main .lingtang .wanlian > .right {
+  background: url("/assets/img/lt/y.png");
+  background-size: 100% 100%;
+  width: 200px;
+  height: 667px;
+  top: 170px;
+  box-sizing: border-box;
+  padding: 70px;
+  font-size: 60px;
+  line-height: 45px;
+  font-family: LiSu;
+}
+#main .lingtang .wanlian > .left {
+  left: 350px;
+}
+#main .lingtang .wanlian > .right {
+  right: 350px;
+}
+#main .lingtang .wanlian > .top {
+  background: url(/assets/img/lt/x.png);
+  background-size: 100% 100%;
+  width: 500px;
+  height: 137px;
+  top: 30px;
+  left: 50%;
+  margin-left: -250px;
+  text-align: center;
+  font-size: 59px;
+  line-height: 13px;
+  font-family: LiSu;
+  box-sizing: border-box;
+  padding: 0 63px;
+}
+#main .lingtang .wanlian > .top img {
+  width: 131px;
+  position: relative;
+  top: -4px;
+}
+#main .lingtang .wanlian > .top p:first-child {
+  float: left;
+}
+#main .lingtang .wanlian > .top p:last-child {
+  float: right;
+}
+#main .lingtang .yinxiang {
+  position: relative;
+  z-index: 1;
+}
+#main .lingtang .yinxiang > div {
+  position: absolute;
+  width: 363px;
+  top: 379px;
+  transition: width 0.3s;
+}
+#main .lingtang .yinxiang > div > img {
+  width: 100%;
+}
+#main .lingtang .yinxiang > .left {
+  left: 100px;
+}
+#main .lingtang .yinxiang > .right {
+  right: 100px;
+  transform: rotateY(180deg);
+}
+#main .gif {
+  position: absolute;
+  top: 600px;
+  z-index: 2;
+  width: 760px;
+  height: 200px;
+  text-align: center;
+  left: 50%;
+  margin-left: -380px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#main .gif img {
+  position: absolute;
+  bottom: 0px;
+  animation-play-state: paused;
+}
+#main .gif img:nth-child(1) {
+  left: 0px;
+}
+#main .gif img:nth-child(2) {
+  left: 170px;
+}
+#main .gif img:nth-child(3) {
+  left: 208px;
+}
+#main .gif img:nth-child(4) {
+  left: 385px;
+}
+#main .gif img:nth-child(5) {
+  left: 435px;
+}
+
+body.play::before {
+  display: none;
+}
+@keyframes bhd {
+  0% {
+    filter: contrast(100%);
+  }
+  100% {
+    filter: contrast(150%);
+  }
+}
+@keyframes douadou {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes douadou2 {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+body.play * {
+  animation: bhd 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+body.play #main .zhaopian {
+  animation: douadou2 0.05s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+body.play #main .wanlian > .right,
+body.play #main .wanlian > .left {
+  animation: douadou2 0.01s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+body.play #main .wanlian > .top {
+  animation: daxiao 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes daxiao {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+body.play #main .wanlian > .top img {
+  animation: zhuanazhuan 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes zhuanazhuan {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body.play #main .yinxiang > .left {
+  animation: yinxiang_l 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes yinxiang_l {
+  0% {
+    background-position-y: 0%;
+    width: 363px;
+    transform: scale(1);
+  }
+  100% {
+    background-position-y: 100%;
+    width: 450px;
+    transform: scale(1.5);
+  }
+}
+body.play #main .yinxiang > .right {
+  animation: yinxiang_r 0.2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes yinxiang_r {
+  0% {
+    background-position-y: 0%;
+    width: 363px;
+    transform: rotateY(180deg) scale(1);
+  }
+  100% {
+    background-position-y: 100%;
+    width: 450px;
+    transform: rotateY(180deg) scale(1.5);
+  }
+}
+body.play #main .gif {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=lt.css.map */
