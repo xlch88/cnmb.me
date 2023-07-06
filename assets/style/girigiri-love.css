@@ -1,0 +1,270 @@
+@charset "UTF-8";
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+form,
+ol,
+ul {
+  margin: 0;
+}
+
+ol,
+ul {
+  padding: 0;
+}
+
+html,
+textarea,
+input,
+option,
+select,
+button {
+  font: 1.2em "Noto Serif SC", serif;
+  color: #222;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+
+::selection {
+  background: rgba(0, 149, 255, 0.1);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #05a;
+  text-decoration: none;
+}
+
+img {
+  border: 0 none;
+}
+
+.o {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+.c:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* html .c {
+  height: 1%;
+}
+
+.h {
+  pointer-events: none;
+  opacity: 0;
+}
+
+xmp {
+  display: none;
+}
+
+a,
+input {
+  transition: 0.3s ease;
+}
+
+audio {
+  width: 100%;
+}
+
+html {
+  background: red 50% 50%;
+  color: red;
+  transition: background 3s ease;
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.cnzz {
+  float: right;
+}
+
+b:after {
+  content: attr(dir);
+}
+
+button {
+  transform: translate(-50%, 0);
+  background: red;
+  color: blue;
+  white-space: nowrap;
+}
+
+#btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  font-size: 3em;
+}
+
+.girigiri {
+  pointer-events: none;
+  font-size: 2.4em;
+  text-shadow: 1px 2px 0 green;
+  position: absolute;
+  -webkit-transform: translate(-50%, -100px);
+  transform: translate(-50%, -100px);
+  height: 1em;
+  white-space: nowrap;
+  font-weight: bold;
+  -webkit-animation: flash 2s;
+  animation: flash 2s;
+}
+
+@-webkit-keyframes flash {
+  from {
+    -webkit-transform: translate(-50%, 0);
+  }
+}
+@keyframes flash {
+  from {
+    transform: translate(-50%, 0);
+  }
+}
+footer {
+  font-size: 0.8em;
+}
+
+.实时靠 {
+  pointer-events: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: 800;
+  font-size: 5vw;
+  font-family: "Noto Serif SC", serif;
+  text-shadow: 0.2em 0.2em 0 green;
+  animation: 0.3s steps(5) infinite;
+  animation-name: shake;
+}
+
+/* 震颤 */
+@-webkit-keyframes shake {
+  50% {
+    -webkit-transform: scale(1.1);
+  }
+  33% {
+    color: red;
+  }
+  66% {
+    color: yellow;
+  }
+}
+@-moz-keyframes shake {
+  50% {
+    -moz-transform: scale(1.1);
+  }
+  33% {
+    color: red;
+  }
+  66% {
+    color: yellow;
+  }
+}
+@-ms-keyframes shake {
+  50% {
+    -ms-transform: scale(1.1);
+  }
+  33% {
+    color: red;
+  }
+  66% {
+    color: yellow;
+  }
+}
+@keyframes shake {
+  50% {
+    transform: scale(1.1);
+  }
+  33% {
+    color: red;
+  }
+  66% {
+    color: yellow;
+  }
+}
+#lrc {
+  pointer-events: none;
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+  padding: 0 3em;
+  color: blue;
+  text-align: center;
+  font: 800 32px/1 "Noto Serif SC", serif;
+  font-size: 6vw;
+  text-shadow: red 12px 15px 0, green -15px 4px 0, yellow 4px -16px 0;
+  animation: shake3 0.3s steps(3) infinite;
+}
+
+/* 震颤 */
+@keyframes shake3 {
+  30% {
+    transform: translate(-3px, -5px);
+  }
+  60% {
+    transform: translate(6px, 3px);
+  }
+}
+
+/*# sourceMappingURL=girigiri-love.css.map */
