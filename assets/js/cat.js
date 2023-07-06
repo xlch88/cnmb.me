@@ -7,6 +7,16 @@ window.onload = () => {
 				type: "video",
 				preview: "/assets/img/cat/video-preview/1.png",
 			},
+			{
+				file: "/assets/video/cat/IMG_6713.MP4",
+				type: "video",
+				preview: "/assets/img/cat/video-preview/2.png",
+			},
+			{
+				file: "/assets/video/cat/IMG_6714.MP4",
+				type: "video",
+				preview: "/assets/img/cat/video-preview/3.png",
+			},
 			{ file: "/assets/img/cat/1499110257062461440-FM3o0_uagAA8Ui1.jpg", type: "photo" },
 			{ file: "/assets/img/cat/1505366313795198976-FOQirG9aQAI2zwC.jpg", type: "photo" },
 			{ file: "/assets/img/cat/1505366313795198976-FOQirHAaIAA6DWZ.jpg", type: "photo" },

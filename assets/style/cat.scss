@@ -9,7 +9,25 @@
 
 	header {
 		color: red;
-		font-size: 30px;
+
+		p {
+			margin: 0;
+		}
+
+		p:nth-child(1) {
+			color: hotpink;
+			font-size: 30px;
+			margin-bottom: 30px;
+		}
+
+		p:nth-child(2) {
+			color: black;
+			font-style: italic;
+			span {
+				font-weight: bold;
+				color: red;
+			}
+		}
 	}
 
 	#img-list {

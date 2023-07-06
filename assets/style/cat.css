@@ -8,7 +8,22 @@
 }
 #main header {
   color: red;
+}
+#main header p {
+  margin: 0;
+}
+#main header p:nth-child(1) {
+  color: hotpink;
   font-size: 30px;
+  margin-bottom: 30px;
+}
+#main header p:nth-child(2) {
+  color: black;
+  font-style: italic;
+}
+#main header p:nth-child(2) span {
+  font-weight: bold;
+  color: red;
 }
 #main #img-list {
   margin: 20px;
