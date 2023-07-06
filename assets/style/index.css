@@ -4,11 +4,11 @@ body {
   height: 100vh;
   height: calc(100vh - env(safe-area-inset-top));
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: nowrap;
   flex-direction: column;
   min-height: 650px;
+  align-items: center;
+  padding: 50px 0;
 }
 
 section {
