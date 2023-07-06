@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "11431136",
+      "name": "play",
+      "font_class": "video-play",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
       "icon_id": "17412103",
       "name": "Cookies-1",
       "font_class": "cookie",

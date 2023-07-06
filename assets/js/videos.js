@@ -87,36 +87,6 @@ window.onload = () => {
 		},
 	}).mount("body");
 };
-//
-// let i;
-//
-// let isClickPlay = false;
-// document.addEventListener("click", clickToPlay);
-// document.getElementsByTagName("video")[0].addEventListener("click", clickToPlay);
-// document.getElementsByTagName("video")[0].addEventListener("ended", nextVideo);
-//
-// nextVideo();
-
-function nextVideo() {
-	if (location.pathname.substring(1) && location.pathname.substring(1) < videos.length) {
-		i = location.pathname.substring(1);
-	} else {
-		let ii;
-		do {
-			ii = random(0, videos.length - 1);
-		} while (ii === i);
-		i = ii;
-	}
-	document.getElementsByTagName("video")[0].src = "/videos/" + videos[i];
-	console.log(i);
-	document.getElementsByTagName("video")[0].play();
-}
-
-function clickToPlay() {
-	document.getElementsByTagName("video")[0].play();
-	document.getElementsByTagName("video")[0].style.pointerEvents = "";
-	isClickPlay = true;
-}
 
 function random(min, max) {
 	return Math.round(Math.random() * (max - min)) + min;

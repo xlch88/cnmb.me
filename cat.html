@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cn">
+	<head>
+		<meta charset="UTF-8" />
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+		<title>妈了个逼，看清楚，这是我的猫，曾经的</title>
+
+		<link href="/assets/vendor/iconfont/iconfont.css" rel="stylesheet" />
+		<link href="/assets/style/common.css" rel="stylesheet" />
+		<link href="/assets/style/cat.css" rel="stylesheet" />
+	</head>
+	<body @vue:mounted="mounted">
+		<section id="main">
+			<header>
+				伍贱鸡，你他妈了个逼的给老子看清楚，这是我的猫！！是你，搞丢了我的猫！！你个逼崽子，吃屎去吧！！林北衷心祝愿你早点死！！
+			</header>
+			<div id="img-list">
+				<div class="item" v-for="图 in 资源列表">
+					<a target="_blank" :href="图.file">
+						<img :src="图.file" v-if="图.type === 'photo'" />
+						<template v-if="图.type === 'video'">
+							<img :src="图.preview" />
+							<i class="cnmlgb cnm-video-play"></i>
+						</template>
+					</a>
+				</div>
+			</div>
+			<footer>
+				<div class="left">这只猫陪我度过了我最艰难的时期。</div>
+				<div class="right">人不应该活在过去，但不代表应该遗忘。</div>
+			</footer>
+		</section>
+		<script src="/assets/vendor/petite-vue/petite-vue.iife.js"></script>
+		<script src="/assets/js/cat.js"></script>
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SQ9S7Q9DKL"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-SQ9S7Q9DKL");
+		</script>
+	</body>
+</html>
