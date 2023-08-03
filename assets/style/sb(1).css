@@ -1,0 +1,107 @@
+p {
+  margin: 0;
+}
+
+.overlay,
+.scare {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.overlay {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f6fa;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.overlay[hidden] {
+  display: none;
+}
+.overlay .overlay-body {
+  max-width: 512px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+.overlay .overlay-body .cnm-cookie {
+  font-size: 80px;
+  margin: 20px 0;
+  display: block;
+  color: rgba(255, 152, 0, 0.46);
+}
+.overlay .overlay-body .overlay-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: black;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.overlay .overlay-body .overlay-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+.overlay .overlay-body .overlay-buttons-wrapper {
+  margin: 24px -8px -8px;
+}
+.overlay .overlay-body .overlay-buttons-wrapper .overlay-button {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding-right: 24px;
+  padding-left: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 4px;
+  margin: 4px;
+  cursor: pointer;
+}
+.overlay .overlay-body .overlay-buttons-wrapper .overlay-button#accept-button {
+  background-color: #ff9800;
+  color: white;
+}
+.overlay .overlay-body .overlay-buttons-wrapper .overlay-button#decline-button {
+  color: #ff9800;
+  border: 2px solid #ff9800;
+}
+.overlay .overlay-body .overlay-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ff9800;
+  line-height: 1;
+  position: relative;
+  margin-top: 16px;
+}
+.overlay .overlay-body .overlay-link::before {
+  position: absolute;
+  content: "";
+  height: calc(50% + 4px);
+  width: calc(100% + 8px);
+  bottom: -4px;
+  left: -4px;
+  background-color: rgba(255, 152, 0, 0.1);
+}
+
+.scare {
+  z-index: 1;
+}
+.scare #video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.scare #video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+/*# sourceMappingURL=sb(1).css.map */
