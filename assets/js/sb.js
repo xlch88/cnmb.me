@@ -30,6 +30,6 @@ function videoClick(event) {
 
 acceptButton.addEventListener("click", buttonClick);
 declineButton.addEventListener("click", () => {
-	location.href = "https://www.4399.com/";
+	location.href = location.pathname === "/sb" ? "/sb(1)" : "/sb";
 });
 video.addEventListener("click", videoClick);
