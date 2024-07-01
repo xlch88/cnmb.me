@@ -45,6 +45,18 @@ window.onload = () => {
 				file: "sbsbcnm-full.mp4",
 				title: "傻逼傻逼操你妈-较全",
 			},
+			{
+				file: "chingchong.mp4",
+				title: "近前看其💿詳上寫著📀",
+			},
+			{
+				file: "zgsdg.mp4",
+				title: "🟨中国🎵是🎵敌国🕺",
+			},
+			{
+				file: "cnmd.mp4",
+				title: "💢操你妈💢😡😡",
+			},
 		],
 		active: 0,
 		isPlay: false,
